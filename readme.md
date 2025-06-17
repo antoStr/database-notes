@@ -27,12 +27,12 @@ Excel ha un limite fisico di righe e colonne per un foglio di lavoro il che lo r
 
 ## Diversi tipi di database
 
-#### Database relazionale
+### Database relazionale (SQL)
 
-Essi sono organizzati da molte tabelle composte da righe e colonne
+Sono organizzati da molte tabelle composte da righe e colonne seguendo schemi rigidi per mantenere coerenza.
 
-**Grassetto** o **Grassetto**
-_Corsivo_ o _Corsivo_
-**_Grassetto e corsivo_**
-~~Barrato~~
-`Codice inline`
+### Database non relazionale (NoSQL)
+
+Consente di archiviare e manipolare dati non strutturati e semi-strutturati.
+
+I più comuni sono questi ma puoi seguire questo link per magari approfondire meglio (https://www.oracle.com/it/database/what-is-database/).
