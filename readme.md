@@ -1,4 +1,4 @@
-#Database
+# Database
 
 Un database è un **sistema organizzato** per la **memorizzazione**, **gestione** e **recupero** efficiente di dati strutturati.
 
