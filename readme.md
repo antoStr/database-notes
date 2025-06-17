@@ -12,6 +12,14 @@ Questo software è chiamato DBMS.
 
 **DBMS** = Database Management System
 
+Ogni database supporta quattro operazioni **fondamentali** che può utilizzare per manipolare dati seguendo l'acronimo **CRUD**:
+(è come se fosse il dna del database)
+
+- **C** - Create -> Inserire nuovi dati
+- **R** - Read -> Leggere dati
+- **U** - Update -> Modificare dati esistenti
+- **D** - Delete -> Cancellare dati
+
 -> Perchè non utilizzo un foglio di dati tipo excel invece di un database?
 
 Principalmente per questioni di accesso, performance, sicurezza e scalabilità.
@@ -19,7 +27,9 @@ Excel ha un limite fisico di righe e colonne per un foglio di lavoro il che lo r
 
 ## Diversi tipi di database
 
-ok
+#### Database relazionale
+
+Essi sono organizzati da molte tabelle composte da righe e colonne
 
 **Grassetto** o **Grassetto**
 _Corsivo_ o _Corsivo_
