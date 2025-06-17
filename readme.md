@@ -37,9 +37,15 @@ Consente di archiviare e manipolare dati non strutturati e semi-strutturati.
 
 I più comuni sono questi ma puoi seguire questo link per magari approfondire meglio (https://www.oracle.com/it/database/what-is-database/).
 
-# CREAZIONE TABELLA IN MYSQL
+# CREAZIONE DATABASE E TABELLA IN MYSQL
 
 ## - DOCUMENTAZIONE -> (https://dev.mysql.com/doc)
+
+Per creare un database dovrò semplicemente scrivere una query:
+
+```sql
+CREATE DATABASE nome_database;
+```
 
 Per creare una tabella bisogna fare:
 
@@ -73,12 +79,52 @@ La nostra pimary key dovrà avere questi attributi per indicizzare la nostra tab
 
 - **PRIMARY KEY** - Questo valore permette di identificare le righe sottostanti indicizzandole univocamente
 
-Essa
-
 ```sql
 CREATE TABLE nome_tabella (
     id int not null auto_increment primary key,
     nome proprietà,
     nome1 proprietà2
 );
+```
+
+Le proprietà di ciascun elemento ovviamente cambiano in base all'utilizzo, le più comuni possono essere:
+
+```sql
+CREATE TABLE nome_tabella (
+    id          int not null auto_increment primary key,
+    nome        varChar(20);
+    cognome     varChar(25);
+    età         int;
+    peso        decimal(5, 2);
+    haBambini   tinyint
+);
+```
+
+Ogni proprietà ha la sua documentazione, utilizzo e tutto il resto, quindi leggila e tieniti sempre aggiornato. Per esempio in realtà il boolean in MySql, esso viene semplicemente convertito in tinyint che è un altro tipo che include sempre numeri e via dicendo.
+
+# INSERIMENTO DI DATI IN TABELLA
+
+Ho creato una tabella tea_shop dove dobbiamo aggiungere degli elementi tea da vendere, ecco la tabella:
+
+```sql
+CREATE TABLE tea_shop (
+    id          int not null auto_increment primary key,
+    tea_name    varChar(20),
+    tea_type    varChar(20),
+    price       decimal(5,2),
+    aviable     boolean
+);
+```
+
+Dovrò inserire una query per aggiungere dei dati nella mia tabella. Ecco la query:
+(se magari la query non funziona è perchè non ho selezionato il database da cui prendere la tabella, quindi posso selezionarlo con la quary "USE DATABASE nome_database")
+
+Qui sto dicendo che deve mettere nella tabella tea_shop (dei valori che si aspetta) dei valori (valori che voglio inserire)
+
+```sql
+INSERT INTO tea_shop () VALUES ()
+```
+
+```sql
+INSERT INTO tea_shop (tea_name, tea_type, price, aviable) VALUES ()
 ```
