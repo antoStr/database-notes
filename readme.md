@@ -43,19 +43,17 @@ I più comuni sono questi ma puoi seguire questo link per magari approfondire me
 
 Per creare una tabella bisogna fare:
 
-`
-CREATE TABLE nome_tabella (
+```sql
+    CREATE TABLE (
 
     );
-
-`
+```
 
 Per inserire dati posso fare:
 
-`
+```sql
 CREATE TABLE nome\*tabella (
 nome variabile
 nome1 variabile2
 );
-
-`
+```
