@@ -4,8 +4,8 @@ Un database è un **sistema organizzato** per la **memorizzazione**, **gestione*
 
 I dati all'interno di un database vengono presentati in **righe** e **colonne** in delle **tabelle** in modo da garantire l'efficienza di elaborazione e query dei dati. La maggior parte dei database utilizza il linguaggio SQL per scrivere, manipolare, definire dati ed eseguirne query.
 
-**SQL** = Structured Query Language
-**Quary** = "Domanda" al database per ottenere informazioni specifiche
+- **SQL** = Structured Query Language
+- **Quary** = "Domanda" al database per ottenere informazioni specifiche
 
 La maggior parte dei database (di solito) richiede un software completo per fornire un'interfaccia grafica per permettere agli utenti di recurepare e gestire dati nei database, esso agevola la supervisione ed il controllo dei database. (Per farla breve è come un ide che usi di solito).
 Questo software è chiamato DBMS.
@@ -76,7 +76,7 @@ Essa
 ```sql
 CREATE TABLE nome_tabella (
     id int not null auto_increment primary key,
-    nome variabile,
-    nome1 variabile2
+    nome proprietà,
+    nome1 proprietà2
 );
 ```
