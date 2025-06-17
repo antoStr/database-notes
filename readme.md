@@ -39,6 +39,8 @@ I più comuni sono questi ma puoi seguire questo link per magari approfondire me
 
 # CREAZIONE TABELLA IN MYSQL
 
+## - DOCUMENTAZIONE -> (https://dev.mysql.com/doc)
+
 Per creare una tabella bisogna fare:
 
 ```sql
