@@ -37,23 +37,46 @@ Consente di archiviare e manipolare dati non strutturati e semi-strutturati.
 
 I più comuni sono questi ma puoi seguire questo link per magari approfondire meglio (https://www.oracle.com/it/database/what-is-database/).
 
-# CREAZIONE TABELLA
-
-(L'ho fatta in sql ma penso che funzioni ovunque in sistemi sql)
+# CREAZIONE TABELLA IN MYSQL
 
 Per creare una tabella bisogna fare:
 
 ```sql
-    CREATE TABLE (
+CREATE TABLE (
 
-    );
+);
 ```
 
 Per inserire dati posso fare:
 
 ```sql
-CREATE TABLE nome\*tabella (
-nome variabile
-nome1 variabile2
+CREATE TABLE nome_tabella (
+    id PRIMARY KEY,
+    nome variabile,
+    nome1 variabile2
+);
+```
+
+La maggior parte delle tabelle presenta una **primary key**, essa permette di ricercare sempre un elemento quando voglio e soprattutto di dargli un indice.
+
+La nostra pimary key dovrà avere questi attributi per indicizzare la nostra tabella:
+
+- **Nome** - Un nome identificativo, nella maggior parte dei casi conciso in modo tale da sapere cosa sto indicizzando senza troppi giri di parole
+
+- **Int** - Valore intero
+
+- **NOT NULL** - Il valore della nostra colonna indicizzata non può essere nullo, se fosse nullo non avrebbe senso e ci intralcerebbe nella indicizzazione
+
+- **AUTO_INCREMENT** - Il database assegna automaticamente un valore crescente
+
+- **PRIMARY KEY** - Questo valore permette di identificare le righe sottostanti indicizzandole univocamente
+
+Essa
+
+```sql
+CREATE TABLE nome_tabella (
+    id int not null auto_increment primary key,
+    nome variabile,
+    nome1 variabile2
 );
 ```
