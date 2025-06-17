@@ -36,3 +36,26 @@ Sono organizzati da molte tabelle composte da righe e colonne seguendo schemi ri
 Consente di archiviare e manipolare dati non strutturati e semi-strutturati.
 
 I più comuni sono questi ma puoi seguire questo link per magari approfondire meglio (https://www.oracle.com/it/database/what-is-database/).
+
+# CREAZIONE TABELLA
+
+(L'ho fatta in sql ma penso che funzioni ovunque in sistemi sql)
+
+Per creare una tabella bisogna fare:
+
+`
+CREATE TABLE nome_tabella (
+
+    );
+
+`
+
+Per inserire dati posso fare:
+
+`
+CREATE TABLE nome\*tabella (
+nome variabile
+nome1 variabile2
+);
+
+`
