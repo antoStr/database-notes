@@ -7,7 +7,7 @@ I dati all'interno di un database vengono presentati in **righe** e **colonne** 
 - **SQL** = Structured Query Language
 - **Query** = "Domanda" al database per ottenere informazioni specifiche
 
-La maggior parte dei database (di solito) richiede un software completo per fornire un'interfaccia grafica per permettere agli utenti di recurepare e gestire dati nei database, esso agevola la supervisione ed il controllo dei database. (Per farla breve è come un ide che usi di solito).
+La maggior parte dei database (di solito) richiede un software completo per fornire un'interfaccia grafica per permettere agli utenti di recuperare e gestire dati nei database, esso agevola la supervisione ed il controllo dei database. (Per farla breve è come un ide che usi di solito).
 Questo software è chiamato DBMS.
 
 **DBMS** = Database Management System
@@ -67,7 +67,7 @@ CREATE TABLE nome_tabella (
 
 ##### La maggior parte delle tabelle presenta una **primary key**, essa permette di ricercare sempre un elemento quando voglio e soprattutto di dargli un indice.
 
-La nostra pimary key dovrà avere questi attributi per indicizzare la nostra tabella:
+La nostra primary key dovrà avere questi attributi per indicizzare la nostra tabella:
 
 - **Nome** - Un nome identificativo, nella maggior parte dei casi conciso in modo tale da sapere cosa sto indicizzando senza troppi giri di parole
 
