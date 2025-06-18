@@ -156,3 +156,37 @@ Ecco quello che mi uscirà:
 | 4   | Iced Chai   | Cold       | 35.00 | 0         |
 | 5   | Oolong Chai | Speciality | 40.00 | 1         |
 ```
+
+Se volessi selezionare e visualizzare solamente le colonne con il nome ed il tipo del tè scrivo:
+
+Seleziona **tea_name e tea_type** da tea_shop
+
+```sql
+SELECT tea_name, tea_type from tea_shop
+```
+
+```markdown
+| tea_name    | tea_type   |
+| ----------- | ---------- |
+| Masala Chai | Spiced     |
+| Green Chai  | Herbal     |
+| Black Chai  | Classic    |
+| Iced Chai   | Cold       |
+| Oolong Chai | Speciality |
+```
+
+Se volessi invece mostrare i nomi delle colonne momentaneamente per una visione migliore posso usare AS:
+
+```sql
+SELECT tea_name AS "Tea Name", tea_type AS "Tea Type" from tea_shop
+```
+
+```markdown
+| Tea Name    | Tea Type   |
+| ----------- | ---------- |
+| Masala Chai | Spiced     |
+| Green Chai  | Herbal     |
+| Black Chai  | Classic    |
+| Iced Chai   | Cold       |
+| Oolong Chai | Speciality |
+```
