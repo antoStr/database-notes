@@ -145,14 +145,14 @@ Seleziona **TUTTO** da tea_shop
 SELECT * FROM tea_shop;
 ```
 
-```markdown
-## Dati della tabella tea_shop
+Ecco quello che mi uscirà:
 
-| tea_name    | tea_type   | price | available |
-| :---------- | :--------- | ----: | :-------: |
-| Masala Chai | Spiced     | 30.00 |    ✅     |
-| Green Chai  | Herbal     | 15.00 |    ✅     |
-| Black Chai  | Classic    | 20.00 |    ✅     |
-| Iced Chai   | Cold       | 35.00 |    ❌     |
-| Oolong Chai | Speciality | 40.00 |    ✅     |
+```markdown
+| id  | tea_name    | tea_type   | price | available |
+| --- | ----------- | ---------- | ----- | --------- |
+| 1   | Masala Chai | Spiced     | 30.00 | true      |
+| 2   | Green Chai  | Herbal     | 15.00 | true      |
+| 3   | Black Chai  | Classic    | 20.00 | true      |
+| 4   | Iced Chai   | Cold       | 35.00 | false     |
+| 5   | Oolong Chai | Speciality | 40.00 | true      |
 ```
