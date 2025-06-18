@@ -5,7 +5,7 @@ Un database è un **sistema organizzato** per la **memorizzazione**, **gestione*
 I dati all'interno di un database vengono presentati in **righe** e **colonne** in delle **tabelle** in modo da garantire l'efficienza di elaborazione e query dei dati. La maggior parte dei database utilizza il linguaggio SQL per scrivere, manipolare, definire dati ed eseguirne query. (E' comunque utile ricordare che il linguaggio SQl non è generalmente case sensitive quindi se scrivessi SELECT o select o Select esegue tranquillamente la query.)
 
 - **SQL** = Structured Query Language
-- **Quary** = "Domanda" al database per ottenere informazioni specifiche
+- **Query** = "Domanda" al database per ottenere informazioni specifiche
 
 La maggior parte dei database (di solito) richiede un software completo per fornire un'interfaccia grafica per permettere agli utenti di recurepare e gestire dati nei database, esso agevola la supervisione ed il controllo dei database. (Per farla breve è come un ide che usi di solito).
 Questo software è chiamato DBMS.
@@ -23,7 +23,7 @@ Ogni database supporta quattro operazioni **fondamentali** che può utilizzare p
 -> Perchè non utilizzo un foglio di dati tipo excel invece di un database?
 
 Principalmente per questioni di accesso, performance, sicurezza e scalabilità.
-Excel ha un limite fisico di righe e colonne per un foglio di lavoro il che lo rende lento ed instabile se il nostro database cresce mentre il database si adatta alla quantità di dati gestiti anche con numeri enormi garantendo stabilità e velocità. Di solito i fogli di calcolo sono pensati per un utente singolo o un numero limitato di utenti che non deve eseguire complesse procedure di organizzazioni di dati dove, al contrario, un database è appunto pensato per fare ciò, consentono a più utenti di accedere a dati, eseguire quary in modo rapido, sicuro mediante una logica e un linguaggio.
+Excel ha un limite fisico di righe e colonne per un foglio di lavoro il che lo rende lento ed instabile se il nostro database cresce mentre il database si adatta alla quantità di dati gestiti anche con numeri enormi garantendo stabilità e velocità. Di solito i fogli di calcolo sono pensati per un utente singolo o un numero limitato di utenti che non deve eseguire complesse procedure di organizzazioni di dati dove, al contrario, un database è appunto pensato per fare ciò, consentono a più utenti di accedere a dati, eseguire query in modo rapido, sicuro mediante una logica e un linguaggio.
 
 ## Diversi tipi di database
 
@@ -59,13 +59,13 @@ Per inserire dati posso fare:
 
 ```sql
 CREATE TABLE nome_tabella (
-    id PRIMARY KEY,
+    id proprietà,
     nome variabile,
-    nome1 variabile2
+    cognome variabile2
 );
 ```
 
-La maggior parte delle tabelle presenta una **primary key**, essa permette di ricercare sempre un elemento quando voglio e soprattutto di dargli un indice.
+##### La maggior parte delle tabelle presenta una **primary key**, essa permette di ricercare sempre un elemento quando voglio e soprattutto di dargli un indice.
 
 La nostra pimary key dovrà avere questi attributi per indicizzare la nostra tabella:
 
@@ -83,7 +83,7 @@ La nostra pimary key dovrà avere questi attributi per indicizzare la nostra tab
 CREATE TABLE nome_tabella (
     id int not null auto_increment primary key,
     nome proprietà,
-    nome1 proprietà2
+    cognome proprietà2
 );
 ```
 
@@ -117,7 +117,7 @@ CREATE TABLE tea_shop (
 ```
 
 Dovrò inserire una query per aggiungere dei dati nella mia tabella. Ecco la query:
-(se magari la query non funziona è perchè non ho selezionato il database da cui prendere la tabella, quindi posso selezionarlo con la quary "USE DATABASE nome_database")
+(se magari la query non funziona è perchè non ho selezionato il database da cui prendere la tabella, quindi posso selezionarlo con la query "USE DATABASE nome_database")
 
 Qui sto dicendo che deve mettere nella tabella tea_shop **(dei valori che si aspetta)** dei valori **(valori che voglio inserire)**
 
@@ -126,6 +126,8 @@ INSERT INTO tea_shop () VALUES ()
 ```
 
 (Per le stringhe puoi usare sia ' che " ma ognuno presenta particolarità se associato a caratteri di escape, ti conviene controllare qui per avere una visione d'insieme più precisa: https://dev.mysql.com/doc/refman/8.4/en/string-literals.html)
+
+Inoltre è utile ricordare che il nostro **id** possiede valori di primary key ed incremento automatico da parte del database, quindi quando inseriamo qualche dato come qua sotto, possiamo ometterlo poichè il nostro database lo auto incrementerà ogni volta che aggiungeremo un nuovo elemento.
 
 ```sql
 INSERT INTO tea_shop (tea_name, tea_type, price, aviable)
@@ -137,9 +139,9 @@ VALUES
 ("Oolong Chai", "Speciality", 40.00, true);
 ```
 
-# RICERCA DATI USANDO QUARY
+# RICERCA DATI USANDO QUERY
 
-## Per visualizzare tutti gli elementi che ho aggiunto nella mia tabella devo scrivere una quary.
+## Per visualizzare tutti gli elementi che ho aggiunto nella mia tabella devo scrivere una query.
 
 ##### Seleziona TUTTO da tea_shop
 
@@ -199,10 +201,10 @@ SELECT tea_name AS "Tea Name", tea_type AS "Tea Type" from tea_shop
 
 (esempio "Ciao mondo" e provo a cercare "ciao" lui non mi restituisce nulla, solo se cercassi "ciao MonDo" mi restituirebbe la stringa se presente nella tabella):
 
-##### Seleziona tutto da tea_shop DOVE chai_name = "Black Chai"
+##### Seleziona tutto da tea_shop DOVE tea_name = "Black Chai"
 
 ```sql
-SELECT * FROM tea_shop WHERE chai_name = "Black Chai"
+SELECT * FROM tea_shop WHERE tea_name = "Black Chai"
 ```
 
 ```markdown
@@ -214,7 +216,7 @@ SELECT * FROM tea_shop WHERE chai_name = "Black Chai"
 Se provassi a cercare solo "Chai" non mi restituirebbe nulla.
 
 ```sql
-SELECT * FROM tea_shop WHERE chai_name = "Chai"
+SELECT * FROM tea_shop WHERE tea_name = "Chai"
 ```
 
 ```markdown
@@ -249,7 +251,7 @@ SELECT * FROM tea_shop WHERE tea_name LIKE "%Chai%";
 | 5   | Oolong Chai | Speciality | 40.00 | 1         |
 ```
 
-## Se volessi ricercare per prezzo potrei scrivere una quary del genere:
+## Se volessi ricercare per prezzo potrei scrivere una query del genere:
 
 ##### Seleziona tutto da tea_shop dove price DEVE ESSERE PIU' PICCOLO DI 30
 
@@ -312,7 +314,7 @@ WHERE dati che voglio che vengano modificati
 
 Prima gli dico su quale tabella deve operare, poi su set aggiorno i dati che voglio che vengano aggiornati ed infine in where gli specifico che dato deve aggiornare.
 
-Se non mettessi la condizione di WHERE mi andrà a modificare tutta la tabella con i valori scritti in set, che detto fra noi, è l'ultima cosa che vorremmo fare nel nostro database, quindi devo prestare attenzione quando scrivo la quary.
+Se non mettessi la condizione di WHERE mi andrà a modificare tutta la tabella con i valori scritti in set, che detto fra noi, è l'ultima cosa che vorremmo fare nel nostro database, quindi devo prestare attenzione quando scrivo la query.
 
 ```sql
 UPDATE tea_shop
@@ -320,7 +322,7 @@ SET price = 38.00, available = TRUE
 WHERE tea_name = "Iced Chai";
 ```
 
-Controllo con una quary per controllare l'effettivo aggiornamento dei dati:
+Controllo con una query per controllare l'effettivo aggiornamento dei dati:
 
 ```sql
 SELECT * FROM tea_shop;
