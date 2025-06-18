@@ -7,7 +7,8 @@
 - [Ricerca dati usando query](#ricerca-dati-usando-query)
 - [Aggiornamento dati](#aggiornamento-dati)
 - [Eliminazione dati](#eliminazione-dati)
-- [DDL](#ddl)
+- [DDL](#data-definition-language)
+- [DML](#data-manipulation-language)
 
 ---
 
@@ -376,7 +377,7 @@ WHERE tea_name = "Black Chai";
 | 5   | Oolong Chai | Speciality | 40.00 | 1         |
 ```
 
-# DDL
+# Data Definition Language
 
 (Documentazione MySQL https://dev.mysql.com/doc/refman/8.4/en/sql-data-definition-statements.html)
 (Documentazione IBM https://www.ibm.com/docs/it/i/7.5.0?topic=programming-data-definition-language)
@@ -474,7 +475,7 @@ RENAME TABLE shop_product TO products_data;
 ALTER TABLE tea_products RENAME COLUMN price TO tea_price
 ```
 
-# DML
+# Data Manipulation Language
 
 (Documentazione MySQL https://dev.mysql.com/doc/refman/8.4/en/sql-data-manipulation-statements.html)
 
@@ -493,3 +494,7 @@ SELECT
 **UPDATE** -> Modifica dati esistenti in una tabella
 **DELETE** -> Elimina righe da una tabella
 **SELECT** -> Recupera dati da una tabella
+
+## INSERT
+
+Come abbiamo visto nella sezione [Inserimento di dati in una tabella](#inserimento-di-dati-in-tabella),
