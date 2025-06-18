@@ -141,7 +141,7 @@ VALUES
 
 Per visualizzare tutti gli elementi che ho aggiunto nella mia tabella devo scrivere una quary.
 
-##### Seleziona **TUTTO** da tea_shop
+##### Seleziona TUTTO da tea_shop
 
 ```sql
 SELECT * FROM tea_shop;
@@ -161,7 +161,7 @@ Ecco quello che mi uscirà:
 
 Se volessi selezionare e visualizzare solamente le colonne con il nome ed il tipo del tè scrivo:
 
-##### Seleziona **tea_name e tea_type** da tea_shop
+##### Seleziona tea_name e tea_type da tea_shop
 
 ```sql
 SELECT tea_name, tea_type from tea_shop
@@ -179,7 +179,7 @@ SELECT tea_name, tea_type from tea_shop
 
 Se volessi invece mostrare i nomi delle colonne momentaneamente per una visione migliore posso usare AS:
 
-##### Seleziona **tea_name** come "Tea Name" e **tea_type** come "Tea Type" da tea_shop
+##### Seleziona tea_name come "Tea Name" e tea_type come "Tea Type" da tea_shop
 
 ```sql
 SELECT tea_name AS "Tea Name", tea_type AS "Tea Type" from tea_shop
@@ -194,3 +194,31 @@ SELECT tea_name AS "Tea Name", tea_type AS "Tea Type" from tea_shop
 | Iced Chai   | Cold       |
 | Oolong Chai | Speciality |
 ```
+
+Se volessi ricercare il valore preciso di una stringa (esempio "Ciao mondo" e provo a cercare "ciao" lui non mi restituisce nulla, solo se cercassi "ciao MonDo" mi restituirebbe la stringa se presente nella tabella):
+
+##### Seleziona tutto da tea_shop DOVE chai_name = "Black Chai"
+
+```sql
+SELECT * FROM tea_shop WHERE chai_name = "Black Chai"
+```
+
+```markdown
+| id  | tea_name   | tea_type | price | available |
+| --- | ---------- | -------- | ----- | --------- |
+| 3   | Black Chai | Classic  | 20.00 | 1         |
+```
+
+Se provassi a cercare solo "Chai" non mi restituirebbe nulla.
+
+```sql
+SELECT * FROM tea_shop WHERE chai_name = "Chai"
+```
+
+```markdown
+| id   | tea_name | tea_type | price | available |
+| ---- | -------- | -------- | ----- | --------- |
+| null | null     | null     | null  | null      |
+```
+
+(In PostgresSQL ricercare per "" a volte provoca errore e devi ricercare per apici singoli. Ovviamente tutto è scritto nella sua documentazione e leggere sempre essa scioglie ogni dubbio -> https://www.postgresql.org/docs/current/)
