@@ -473,3 +473,23 @@ RENAME TABLE shop_product TO products_data;
 ```sql
 ALTER TABLE tea_products RENAME COLUMN price TO tea_price
 ```
+
+# DML
+
+(Documentazione MySQL https://dev.mysql.com/doc/refman/8.4/en/sql-data-manipulation-statements.html)
+
+I comandi DML o **Data Manipulation Language** operano con la manipolazione dei dati all'interno delle tabelle
+
+Fanno parte della famigliad dei comandi DML:
+
+```sql
+INSERT
+UPDATE
+DELETE
+SELECT
+```
+
+**INSERT** -> Inserisce nuovi dati in una tabella
+**UPDATE** -> Modifica dati esistenti in una tabella
+**DELETE** -> Elimina righe da una tabella
+**SELECT** -> Recupera dati da una tabella
