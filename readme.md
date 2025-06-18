@@ -139,8 +139,20 @@ VALUES
 
 Per visualizzare tutti gli elementi che ho aggiunto nella mia tabella devo scrivere una quary.
 
-**Seleziona **TUTTO** da tea_shop**
+Seleziona **TUTTO** da tea_shop
 
 ```sql
 SELECT * FROM tea_shop;
+```
+
+```markdown
+## Dati della tabella tea_shop
+
+| tea_name    | tea_type   | price | available |
+| :---------- | :--------- | ----: | :-------: |
+| Masala Chai | Spiced     | 30.00 |    ✅     |
+| Green Chai  | Herbal     | 15.00 |    ✅     |
+| Black Chai  | Classic    | 20.00 |    ✅     |
+| Iced Chai   | Cold       | 35.00 |    ❌     |
+| Oolong Chai | Speciality | 40.00 |    ✅     |
 ```
