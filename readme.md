@@ -335,3 +335,28 @@ SELECT * FROM tea_shop;
 | 4   | Iced Chai   | Cold       | 38.00 | 1         |
 | 5   | Oolong Chai | Speciality | 40.00 | 1         |
 ```
+
+# ELIMINAZIONE DATI
+
+## Se volessimo eliminare dei dati da una tabella seguo:
+
+```sql
+DELETE FROM nome_tabella
+WHERE dato che voglio eliminare
+```
+
+Come prima, gli dico su che tabella deve operare e in WHERE gli elenco che dato deve andare a considerare.
+
+```sql
+DELETE FROM tea_shop
+WHERE tea_name = "Black Chai";
+```
+
+```markdown
+| id  | tea_name    | tea_type   | price | available |
+| --- | ----------- | ---------- | ----- | --------- |
+| 1   | Masala Chai | Spiced     | 30.00 | 1         |
+| 2   | Green Chai  | Herbal     | 15.00 | 1         |
+| 4   | Iced Chai   | Cold       | 38.00 | 1         |
+| 5   | Oolong Chai | Speciality | 40.00 | 1         |
+```
