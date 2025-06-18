@@ -92,8 +92,8 @@ Le proprietà di ciascun elemento ovviamente cambiano in base all'utilizzo, le p
 ```sql
 CREATE TABLE nome_tabella (
     id          int not null auto_increment primary key,
-    nome        varChar(20),
-    cognome     varChar(25),
+    nome        VARCHAR(20),
+    cognome     VARCHAR(25),
     età         int,
     peso        decimal(5, 2),
     haBambini   tinyint
@@ -109,8 +109,8 @@ Ho creato una tabella tea_shop dove dobbiamo aggiungere degli elementi tea da ve
 ```sql
 CREATE TABLE tea_shop (
     id          int not null auto_increment primary key,
-    tea_name    varChar(20),
-    tea_type    varChar(20),
+    tea_name    VARCHAR(20),
+    tea_type    VARCHAR(20),
     price       decimal(5,2),
     available   boolean
 );
@@ -130,7 +130,7 @@ INSERT INTO tea_shop () VALUES ()
 Inoltre è utile ricordare che il nostro **id** possiede valori di primary key ed incremento automatico da parte del database, quindi quando inseriamo qualche dato come qua sotto, possiamo ometterlo poichè il nostro database lo auto incrementerà ogni volta che aggiungeremo un nuovo elemento.
 
 ```sql
-INSERT INTO tea_shop (tea_name, tea_type, price, aviable)
+INSERT INTO tea_shop (tea_name, tea_type, price, available)
 VALUES
 ("Masala Chai", "Spiced", 30.00, true),
 ("Green Chai", "Herbal", 15.00, true),
