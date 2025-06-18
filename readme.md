@@ -299,3 +299,39 @@ SELECT * FROM tea_shop ORDER BY price DESC;
 | 3   | Black Chai  | Classic    | 20.00 | 1         |
 | 2   | Green Chai  | Herbal     | 15.00 | 1         |
 ```
+
+# AGGIORNAMENTO DATI
+
+## Se volessi aggiornare dei dati nella mia tabella devo seguire:
+
+```sql
+UPDATE nome_database
+SET dati aggiornati
+WHERE dati che voglio che vengano modificati
+```
+
+Prima gli dico su quale tabella deve operare, poi su set aggiorno i dati che voglio che vengano aggiornati ed infine in where gli specifico che dato deve aggiornare.
+
+Se non mettessi la condizione di WHERE mi andrà a modificare tutta la tabella con i valori scritti in set, che detto fra noi, è l'ultima cosa che vorremmo fare nel nostro database, quindi devo prestare attenzione quando scrivo la quary.
+
+```sql
+UPDATE tea_shop
+SET price = 38.00, available = TRUE
+WHERE tea_name = "Iced Chai";
+```
+
+Controllo con una quary per controllare l'effettivo aggiornamento dei dati:
+
+```sql
+SELECT * FROM tea_shop;
+```
+
+```markdown
+| id  | tea_name    | tea_type   | price | available |
+| --- | ----------- | ---------- | ----- | --------- |
+| 1   | Masala Chai | Spiced     | 30.00 | 1         |
+| 2   | Green Chai  | Herbal     | 15.00 | 1         |
+| 3   | Black Chai  | Classic    | 20.00 | 1         |
+| 4   | Iced Chai   | Cold       | 38.00 | 1         |
+| 5   | Oolong Chai | Speciality | 40.00 | 1         |
+```
