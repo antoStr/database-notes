@@ -374,3 +374,42 @@ WHERE tea_name = "Black Chai";
 | 4   | Iced Chai   | Cold       | 38.00 | 1         |
 | 5   | Oolong Chai | Speciality | 40.00 | 1         |
 ```
+
+# DDL
+
+(Documentazione https://www.ibm.com/docs/it/i/7.5.0?topic=programming-data-definition-language)
+
+Il DDL o Data Definition Language è utilizzato per gestire oggetti nel database come tabelle, indici, ed altro. Questi DDL o comandi DDL si rapportano con la struttura e lo schema del database.
+
+Ecco alcuni comandi che fanno parte del DDL:
+
+```sql
+CREATE
+ALTER
+DROP
+TRUNCATE
+RENAME
+```
+
+**CREATE** - > Crea un nuovo oggetto database (table, index, view..)
+**ALTER** - > Modifica un oggetto esistente (aggiunge/rimuove colonne)
+**DROP** - > Elimina un oggetto (table, index..)
+**TRUNCATE** - > Rimuove tutte le righe ma mantiene la struttura
+**RENAME** - > Rinomina un oggetto esistente (table, column..)
+
+## CREATE
+
+Abbiamo visto prima qualche esempio di creazione di oggetto in SQL, ecco un esempio riassuntivo.
+Con il comando CREATE posso andare a creare un nuovo oggetto:
+
+```sql
+CREATE DATABASE shop;
+```
+
+```sql
+CREATE TABLE shop_product(
+    idProd int not null auto_increment primary key,
+    prod_name varChar(50),
+    quantity int,
+);
+```
