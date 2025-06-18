@@ -497,4 +497,15 @@ SELECT
 
 ## INSERT
 
-Come abbiamo visto nella sezione [Inserimento di dati in una tabella](#inserimento-di-dati-in-tabella),
+Come abbiamo visto nella sezione di [inserimento di dati in una tabella](#inserimento-di-dati-in-tabella), possiamo inserire dati con il comando INSERT.
+
+##### INSERISCE DENTRO shop_products (prod_name, price, quantity) I VALORI ("Tea Cup", 4.99, 40)
+
+```sql
+INSERT INTO shop_products (prod_name, price, quantity)
+VALUES ("Tea Cup", 4.99, 40);
+```
+
+## UPDATE
+
+Come prima, nella sezione di [aggiornamento dei dati](#aggiornamento-dati)
