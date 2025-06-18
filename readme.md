@@ -139,7 +139,7 @@ VALUES
 
 # RICERCA DATI USANDO QUARY
 
-Per visualizzare tutti gli elementi che ho aggiunto nella mia tabella devo scrivere una quary.
+## Per visualizzare tutti gli elementi che ho aggiunto nella mia tabella devo scrivere una quary.
 
 ##### Seleziona TUTTO da tea_shop
 
@@ -159,7 +159,7 @@ Ecco quello che mi uscirà:
 | 5   | Oolong Chai | Speciality | 40.00 | 1         |
 ```
 
-Se volessi selezionare e visualizzare solamente le colonne con il nome ed il tipo del tè scrivo:
+## Se volessi selezionare e visualizzare solamente le colonne con il nome ed il tipo del tè scrivo:
 
 ##### Seleziona tea_name e tea_type da tea_shop
 
@@ -177,7 +177,7 @@ SELECT tea_name, tea_type from tea_shop
 | Oolong Chai | Speciality |
 ```
 
-Se volessi invece mostrare i nomi delle colonne momentaneamente per una visione migliore posso usare AS:
+## Se volessi invece mostrare i nomi delle colonne momentaneamente per una visione migliore posso usare AS:
 
 ##### Seleziona tea_name come "Tea Name" e tea_type come "Tea Type" da tea_shop
 
@@ -195,7 +195,7 @@ SELECT tea_name AS "Tea Name", tea_type AS "Tea Type" from tea_shop
 | Oolong Chai | Speciality |
 ```
 
-Se volessi ricercare il valore preciso di una stringa (esempio "Ciao mondo" e provo a cercare "ciao" lui non mi restituisce nulla, solo se cercassi "ciao MonDo" mi restituirebbe la stringa se presente nella tabella):
+## Se volessi ricercare il valore preciso di una stringa (esempio "Ciao mondo" e provo a cercare "ciao" lui non mi restituisce nulla, solo se cercassi "ciao MonDo" mi restituirebbe la stringa se presente nella tabella):
 
 ##### Seleziona tutto da tea_shop DOVE chai_name = "Black Chai"
 
