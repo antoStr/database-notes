@@ -137,9 +137,11 @@ VALUES
 ("Oolong Chai", "Speciality", 40.00, true);
 ```
 
+# RICERCA DATI USANDO QUARY
+
 Per visualizzare tutti gli elementi che ho aggiunto nella mia tabella devo scrivere una quary.
 
-Seleziona **TUTTO** da tea_shop
+###### Seleziona **TUTTO** da tea_shop
 
 ```sql
 SELECT * FROM tea_shop;
@@ -176,6 +178,8 @@ SELECT tea_name, tea_type from tea_shop
 ```
 
 Se volessi invece mostrare i nomi delle colonne momentaneamente per una visione migliore posso usare AS:
+
+###### Seleziona **tea_name** come "Tea Name" e **tea_type** come "Tea Type" da tea_shop
 
 ```sql
 SELECT tea_name AS "Tea Name", tea_type AS "Tea Type" from tea_shop
