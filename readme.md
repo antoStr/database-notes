@@ -92,10 +92,10 @@ Le proprietà di ciascun elemento ovviamente cambiano in base all'utilizzo, le p
 ```sql
 CREATE TABLE nome_tabella (
     id          int not null auto_increment primary key,
-    nome        varChar(20);
-    cognome     varChar(25);
-    età         int;
-    peso        decimal(5, 2);
+    nome        varChar(20),
+    cognome     varChar(25),
+    età         int,
+    peso        decimal(5, 2),
     haBambini   tinyint
 );
 ```
@@ -112,7 +112,7 @@ CREATE TABLE tea_shop (
     tea_name    varChar(20),
     tea_type    varChar(20),
     price       decimal(5,2),
-    aviable     boolean
+    available   boolean
 );
 ```
 
@@ -307,7 +307,7 @@ SELECT * FROM tea_shop ORDER BY price DESC;
 ## Se volessi aggiornare dei dati nella mia tabella devo seguire:
 
 ```sql
-UPDATE nome_database
+UPDATE nome_tabella
 SET dati aggiornati
 WHERE dati che voglio che vengano modificati
 ```
