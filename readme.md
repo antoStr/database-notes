@@ -508,4 +508,4 @@ VALUES ("Tea Cup", 4.99, 40);
 
 ## UPDATE
 
-Come prima, nella sezione di [aggiornamento dei dati](#aggiornamento-dati)
+Come prima, nella sezione di [aggiornamento dei dati](#aggiornamento-dati), posso
