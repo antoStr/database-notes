@@ -1,3 +1,15 @@
+# Indice
+
+- [Database](#database)
+- [Diversi tipi di database](#diversi-tipi-di-database)
+- [Creazione Database e Tabella in MySQL](#creazione-database-e-tabella-in-mysql)
+- [Inserimento di dati in tabella](#inserimento-di-dati-in-tabella)
+- [Ricerca dati usando query](#ricerca-dati-usando-query)
+- [Aggiornamento dati](#aggiornamento-dati)
+- [Eliminazione dati](#eliminazione-dati)
+
+---
+
 # Database
 
 Un database è un **sistema organizzato** per la **memorizzazione**, **gestione** e **recupero** efficiente di dati strutturati.
