@@ -150,9 +150,9 @@ Ecco quello che mi uscirà:
 ```markdown
 | id  | tea_name    | tea_type   | price | available |
 | --- | ----------- | ---------- | ----- | --------- |
-| 1   | Masala Chai | Spiced     | 30.00 | true      |
-| 2   | Green Chai  | Herbal     | 15.00 | true      |
-| 3   | Black Chai  | Classic    | 20.00 | true      |
-| 4   | Iced Chai   | Cold       | 35.00 | false     |
-| 5   | Oolong Chai | Speciality | 40.00 | true      |
+| 1   | Masala Chai | Spiced     | 30.00 | 1         |
+| 2   | Green Chai  | Herbal     | 15.00 | 1         |
+| 3   | Black Chai  | Classic    | 20.00 | 1         |
+| 4   | Iced Chai   | Cold       | 35.00 | 0         |
+| 5   | Oolong Chai | Speciality | 40.00 | 1         |
 ```
