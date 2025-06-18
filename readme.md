@@ -246,3 +246,54 @@ SELECT * FROM tea_shop WHERE tea_name LIKE "%Chai%";
 | 4   | Iced Chai   | Cold       | 35.00 | 0         |
 | 5   | Oolong Chai | Speciality | 40.00 | 1         |
 ```
+
+Se volessi ricercare per prezzo potrei scrivere una quary del genere:
+
+##### Seleziona tutto da tea_shop dove price DEVE ESSERE PIU' PICCOLO DI 30
+
+```sql
+SELECT * FROM tea_shop WHERE price < 30;
+```
+
+```markdown
+| id  | tea_name   | tea_type | price | available |
+| --- | ---------- | -------- | ----- | --------- |
+| 2   | Green Chai | Herbal   | 15.00 | 1         |
+| 3   | Black Chai | Classic  | 20.00 | 1         |
+```
+
+Se volessi ricercare per ordine di prezzo potrei scrivere:
+
+##### Seleziona tutto da tea_shop ORDINATO PER price
+
+```sql
+SELECT * FROM tea_shop ORDER BY price;
+```
+
+```markdown
+| id  | tea_name    | tea_type   | price | available |
+| --- | ----------- | ---------- | ----- | --------- |
+| 2   | Green Chai  | Herbal     | 15.00 | 1         |
+| 3   | Black Chai  | Classic    | 20.00 | 1         |
+| 1   | Masala Chai | Spiced     | 30.00 | 1         |
+| 4   | Iced Chai   | Cold       | 35.00 | 0         |
+| 5   | Oolong Chai | Speciality | 40.00 | 1         |
+```
+
+Per scriverlo in maniera inversa, quindi dal prezzo più grande al più piccolo invece posso scrivere:
+
+##### Seleziona tutto da tea_shop ORDINATO PER price DESC
+
+```sql
+SELECT * FROM tea_shop ORDER BY price DESC;
+```
+
+```markdown
+| id  | tea_name    | tea_type   | price | available |
+| --- | ----------- | ---------- | ----- | --------- |
+| 5   | Oolong Chai | Speciality | 40.00 | 1         |
+| 4   | Iced Chai   | Cold       | 35.00 | 0         |
+| 1   | Masala Chai | Spiced     | 30.00 | 1         |
+| 3   | Black Chai  | Classic    | 20.00 | 1         |
+| 2   | Green Chai  | Herbal     | 15.00 | 1         |
+```
