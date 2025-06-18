@@ -7,8 +7,9 @@
 - [Ricerca dati usando query](#ricerca-dati-usando-query)
 - [Aggiornamento dati](#aggiornamento-dati)
 - [Eliminazione dati](#eliminazione-dati)
-- [DDL](#data-definition-language)
-- [DML](#data-manipulation-language)
+- [Data Definition Language](#data-definition-language)
+- [Data Manuipulation Language](#data-manipulation-language)
+- [Data Control Language](#data-control-language)
 
 ---
 
@@ -521,7 +522,7 @@ WHERE name = "Tea Cup"
 
 ## DELETE
 
-Il comando DELETE mi permette di eliminare dati da una tabella. Ricorda sempre di specificare bene il WHERE
+Il comando DELETE mi permette di eliminare dati da una tabella. Ricorda sempre di specificare bene il WHERE.
 
 ```sql
 DELETE FROM shop_products
@@ -560,3 +561,27 @@ SELECT * FROM tea_shop WHERE price < 30;
 | 2   | Green Chai | Herbal   | 15.00 | 1         |
 | 3   | Black Chai | Classic  | 20.00 | 1         |
 ```
+
+# Data Control Language
+
+(Documentazione MySQL https://dev.mysql.com/doc/refman/8.4/en/account-management-statements.html)
+
+Il DCL o **Data Control Language** ci permette di modificare o revocare permessi per utenti che hanno accesso al nostro database. In questa sezione non tratterò molto poichè non ci serve inizialmente a capire la manipolazione dei dati o query.
+
+Principalmente è il ruolo che copre il database admin che gestisce permessi in base ad un team che gestisce porzioni o comandi in un database. Quindi se un operazione, per esempio, di INSERT o UPDATE è necessaria ed il sales_team lo richiede posso fornire permessi per utilizzare il comando INSERT nel database.
+
+##### AUTORIZZA OPERAZIONE INSERT, UPDATE su tea_shop A sales_team
+
+```sql
+GRANT INSERT, UPDATE ON tea_shop TO sales_team
+```
+
+Se un giorno volessi revocare permessi per operazioni di INSERT rispetto a sales_team posso modificarlo con REVOKE.
+
+##### REVOCA OPERAZIONE INSERT, UPDATE su tea_shop DA sales_team
+
+```sql
+REVOKE INSERT ON tea_shop FROM sales_team
+```
+
+Se vuoi saperne di più riguardo la gestione di permessi trovi tutto nella documentazione allegata.
