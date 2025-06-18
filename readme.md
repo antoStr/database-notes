@@ -141,7 +141,7 @@ VALUES
 
 Per visualizzare tutti gli elementi che ho aggiunto nella mia tabella devo scrivere una quary.
 
-###### Seleziona **TUTTO** da tea_shop
+##### Seleziona **TUTTO** da tea_shop
 
 ```sql
 SELECT * FROM tea_shop;
@@ -161,7 +161,7 @@ Ecco quello che mi uscirà:
 
 Se volessi selezionare e visualizzare solamente le colonne con il nome ed il tipo del tè scrivo:
 
-###### Seleziona **tea_name e tea_type** da tea_shop
+##### Seleziona **tea_name e tea_type** da tea_shop
 
 ```sql
 SELECT tea_name, tea_type from tea_shop
@@ -179,7 +179,7 @@ SELECT tea_name, tea_type from tea_shop
 
 Se volessi invece mostrare i nomi delle colonne momentaneamente per una visione migliore posso usare AS:
 
-###### Seleziona **tea_name** come "Tea Name" e **tea_type** come "Tea Type" da tea_shop
+##### Seleziona **tea_name** come "Tea Name" e **tea_type** come "Tea Type" da tea_shop
 
 ```sql
 SELECT tea_name AS "Tea Name", tea_type AS "Tea Type" from tea_shop
