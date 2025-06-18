@@ -221,4 +221,28 @@ SELECT * FROM tea_shop WHERE chai_name = "Chai"
 | null | null     | null     | null  | null      |
 ```
 
-(In PostgresSQL ricercare per "" a volte provoca errore e devi ricercare per apici singoli. Ovviamente tutto è scritto nella sua documentazione e leggere sempre essa scioglie ogni dubbio -> https://www.postgresql.org/docs/current/)
+Per ricercare una stringa o un testo devo usare l'operatore **LIKE** ed il simbolo della percentuale **%**, esso mi dice "non mi interessa quello che viene prima (se lo metto prima di una parola) o dopo (se lo metto dopo), l'importante è che mi mostri se esiste una stringa che abbia quello che cerco io grazie all'operatore di confronto **LIKE**
+
+(In PostgresSQL ricercare per doppi apici (" ") a volte provoca errore e devi ricercare per apici singoli (' '). Ovviamente tutto è scritto nella sua documentazione e leggere sempre essa scioglie ogni dubbio -> https://www.postgresql.org/docs/current/)
+
+##### "%Chai" -> Trova stringhe che terminano con "Chai"
+
+##### "Chai%" -> Trova stringhe che iniziano con "Chai"
+
+##### "%Chai%" -> Trova stringhe che contengono "Chai"
+
+##### Seleziona tutto da tea_shop dove tea_name **DEV'ESSERE UGUALE A** "%Chai%"
+
+```sql
+SELECT * FROM tea_shop WHERE tea_name LIKE "%Chai%";
+```
+
+```markdown
+| id  | tea_name    | tea_type   | price | available |
+| --- | ----------- | ---------- | ----- | --------- |
+| 1   | Masala Chai | Spiced     | 30.00 | 1         |
+| 2   | Green Chai  | Herbal     | 15.00 | 1         |
+| 3   | Black Chai  | Classic    | 20.00 | 1         |
+| 4   | Iced Chai   | Cold       | 35.00 | 0         |
+| 5   | Oolong Chai | Speciality | 40.00 | 1         |
+```
