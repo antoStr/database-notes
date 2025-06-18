@@ -159,7 +159,7 @@ Ecco quello che mi uscirà:
 
 Se volessi selezionare e visualizzare solamente le colonne con il nome ed il tipo del tè scrivo:
 
-Seleziona **tea_name e tea_type** da tea_shop
+###### Seleziona **tea_name e tea_type** da tea_shop
 
 ```sql
 SELECT tea_name, tea_type from tea_shop
