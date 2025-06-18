@@ -195,7 +195,9 @@ SELECT tea_name AS "Tea Name", tea_type AS "Tea Type" from tea_shop
 | Oolong Chai | Speciality |
 ```
 
-## Se volessi ricercare il valore preciso di una stringa (esempio "Ciao mondo" e provo a cercare "ciao" lui non mi restituisce nulla, solo se cercassi "ciao MonDo" mi restituirebbe la stringa se presente nella tabella):
+## Se volessi ricercare il valore preciso di una stringa:
+
+(esempio "Ciao mondo" e provo a cercare "ciao" lui non mi restituisce nulla, solo se cercassi "ciao MonDo" mi restituirebbe la stringa se presente nella tabella):
 
 ##### Seleziona tutto da tea_shop DOVE chai_name = "Black Chai"
 
@@ -209,7 +211,7 @@ SELECT * FROM tea_shop WHERE chai_name = "Black Chai"
 | 3   | Black Chai | Classic  | 20.00 | 1         |
 ```
 
-Se provassi a cercare solo "Chai" non mi restituirebbe nulla.
+## Se provassi a cercare solo "Chai" non mi restituirebbe nulla.
 
 ```sql
 SELECT * FROM tea_shop WHERE chai_name = "Chai"
@@ -247,7 +249,7 @@ SELECT * FROM tea_shop WHERE tea_name LIKE "%Chai%";
 | 5   | Oolong Chai | Speciality | 40.00 | 1         |
 ```
 
-Se volessi ricercare per prezzo potrei scrivere una quary del genere:
+## Se volessi ricercare per prezzo potrei scrivere una quary del genere:
 
 ##### Seleziona tutto da tea_shop dove price DEVE ESSERE PIU' PICCOLO DI 30
 
@@ -262,7 +264,7 @@ SELECT * FROM tea_shop WHERE price < 30;
 | 3   | Black Chai | Classic  | 20.00 | 1         |
 ```
 
-Se volessi ricercare per ordine di prezzo potrei scrivere:
+## Se volessi ricercare per ordine di prezzo potrei scrivere:
 
 ##### Seleziona tutto da tea_shop ORDINATO PER price
 
