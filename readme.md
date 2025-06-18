@@ -211,7 +211,7 @@ SELECT * FROM tea_shop WHERE chai_name = "Black Chai"
 | 3   | Black Chai | Classic  | 20.00 | 1         |
 ```
 
-## Se provassi a cercare solo "Chai" non mi restituirebbe nulla.
+Se provassi a cercare solo "Chai" non mi restituirebbe nulla.
 
 ```sql
 SELECT * FROM tea_shop WHERE chai_name = "Chai"
