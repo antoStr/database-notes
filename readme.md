@@ -133,7 +133,7 @@ CREATE TABLE tea_shop (
 Dovrò inserire una query per aggiungere dei dati nella mia tabella. Ecco la query:
 (se magari la query non funziona è perchè non ho selezionato il database da cui prendere la tabella, quindi posso selezionarlo con la query "USE DATABASE nome_database")
 
-Qui sto dicendo che deve mettere nella tabella tea_shop **(dei valori che si aspetta)** dei valori **(valori che voglio inserire)**
+Qui sto dicendo che deve mettere nella tabella tea_shop **(valori che si aspetta)** dei valori **(valori che voglio inserire)**
 
 ```sql
 INSERT INTO tea_shop () VALUES ()
@@ -326,7 +326,7 @@ SET dati aggiornati
 WHERE dati che voglio che vengano modificati
 ```
 
-Prima gli dico su quale tabella deve operare, poi su set aggiorno i dati che voglio che vengano aggiornati ed infine in where gli specifico che dato deve aggiornare.
+Prima gli dico su quale tabella deve operare, poi su set aggiorno i dati che voglio che vengano aggiornati ed infine in where gli specifico che dato deve aggiornare, il nostro where è come se fosse una condizione che la nostra query deve rispettare.
 
 Se non mettessi la condizione di WHERE mi andrà a modificare tutta la tabella con i valori scritti in set, che detto fra noi, è l'ultima cosa che vorremmo fare nel nostro database, quindi devo prestare attenzione quando scrivo la query.
 
@@ -508,4 +508,55 @@ VALUES ("Tea Cup", 4.99, 40);
 
 ## UPDATE
 
-Come prima, nella sezione di [aggiornamento dei dati](#aggiornamento-dati), posso
+Come prima, nella sezione di [aggiornamento dei dati](#aggiornamento-dati), posso andare ad aggiornare dei dati esistenti in una tabella specificando con cosa e dove.
+Ricorda che se non specifichi il WHERE potenzialmente puoi sovrascrivere l'intera tabella.
+
+##### AGGIORNA shop_products MODIFICA price = 6.99 DOVE name = "Tea Cup"
+
+```sql
+UPDATE shop_products
+SET price = 6.99
+WHERE name = "Tea Cup"
+```
+
+## DELETE
+
+Il comando DELETE mi permette di eliminare dati da una tabella. Ricorda sempre di specificare bene il WHERE
+
+```sql
+DELETE FROM shop_products
+WHERE name = "Tea Cup"
+```
+
+## SELECT
+
+Il comando SELECT ci permette di selezionare dei dati, ci è molto utile nelle query dove dobbiamo selezionare dei parametri da ricercare ed altro. Ci sono molti esempi [sopra](#aggiornamento-dati) in cui abbiamo utilizzato il comando SELECT, lascio qui sotto qualche esempio trattato.
+
+##### SELEZIONA TUTTO DA tea_shop
+
+```sql
+SELECT * FROM tea_shop;
+```
+
+```markdown
+| id  | tea_name    | tea_type   | price | available |
+| --- | ----------- | ---------- | ----- | --------- |
+| 1   | Masala Chai | Spiced     | 30.00 | 1         |
+| 2   | Green Chai  | Herbal     | 15.00 | 1         |
+| 3   | Black Chai  | Classic    | 20.00 | 1         |
+| 4   | Iced Chai   | Cold       | 38.00 | 1         |
+| 5   | Oolong Chai | Speciality | 40.00 | 1         |
+```
+
+##### SELEZIONA TUTTO DA tea_shop DOVE price < 30
+
+```sql
+SELECT * FROM tea_shop WHERE price < 30;
+```
+
+```markdown
+| id  | tea_name   | tea_type | price | available |
+| --- | ---------- | -------- | ----- | --------- |
+| 2   | Green Chai | Herbal   | 15.00 | 1         |
+| 3   | Black Chai | Classic  | 20.00 | 1         |
+```
