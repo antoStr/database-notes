@@ -2,7 +2,7 @@
 
 Un database è un **sistema organizzato** per la **memorizzazione**, **gestione** e **recupero** efficiente di dati strutturati.
 
-I dati all'interno di un database vengono presentati in **righe** e **colonne** in delle **tabelle** in modo da garantire l'efficienza di elaborazione e query dei dati. La maggior parte dei database utilizza il linguaggio SQL per scrivere, manipolare, definire dati ed eseguirne query.
+I dati all'interno di un database vengono presentati in **righe** e **colonne** in delle **tabelle** in modo da garantire l'efficienza di elaborazione e query dei dati. La maggior parte dei database utilizza il linguaggio SQL per scrivere, manipolare, definire dati ed eseguirne query. (E' comunque utile ricordare che il linguaggio SQl non è generalmente case sensitive quindi se scrivessi SELECT o select o Select esegue tranquillamente la query.)
 
 - **SQL** = Structured Query Language
 - **Quary** = "Domanda" al database per ottenere informazioni specifiche
@@ -119,12 +119,28 @@ CREATE TABLE tea_shop (
 Dovrò inserire una query per aggiungere dei dati nella mia tabella. Ecco la query:
 (se magari la query non funziona è perchè non ho selezionato il database da cui prendere la tabella, quindi posso selezionarlo con la quary "USE DATABASE nome_database")
 
-Qui sto dicendo che deve mettere nella tabella tea_shop (dei valori che si aspetta) dei valori (valori che voglio inserire)
+Qui sto dicendo che deve mettere nella tabella tea_shop **(dei valori che si aspetta)** dei valori **(valori che voglio inserire)**
 
 ```sql
 INSERT INTO tea_shop () VALUES ()
 ```
 
+(Per le stringhe puoi usare sia ' che " ma ognuno presenta particolarità se associato a caratteri di escape, ti conviene controllare qui per avere una visione d'insieme più precisa: https://dev.mysql.com/doc/refman/8.4/en/string-literals.html)
+
 ```sql
-INSERT INTO tea_shop (tea_name, tea_type, price, aviable) VALUES ()
+INSERT INTO tea_shop (tea_name, tea_type, price, aviable)
+VALUES
+("Masala Chai", "Spiced", 30.00, true),
+("Green Chai", "Herbal", 15.00, true),
+("Black Chai", "Classic", 20.00, true),
+("Iced Chai", "Cold", 35.00, false),
+("Oolong Chai", "Speciality", 40.00, true);
+```
+
+Per visualizzare tutti gli elementi che ho aggiunto nella mia tabella devo scrivere una quary.
+
+**Seleziona **TUTTO** da tea_shop**
+
+```sql
+SELECT * FROM tea_shop;
 ```
