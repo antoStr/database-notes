@@ -7,6 +7,7 @@
 - [Ricerca dati usando query](#ricerca-dati-usando-query)
 - [Aggiornamento dati](#aggiornamento-dati)
 - [Eliminazione dati](#eliminazione-dati)
+- [DDL](#ddl)
 
 ---
 
@@ -377,7 +378,8 @@ WHERE tea_name = "Black Chai";
 
 # DDL
 
-(Documentazione https://www.ibm.com/docs/it/i/7.5.0?topic=programming-data-definition-language)
+(Documentazione MySQL https://dev.mysql.com/doc/refman/8.4/en/sql-data-definition-statements.html)
+(Documentazione IBM https://www.ibm.com/docs/it/i/7.5.0?topic=programming-data-definition-language)
 
 Il DDL o Data Definition Language è utilizzato per gestire oggetti nel database come tabelle, indici, ed altro. Questi DDL o comandi DDL si rapportano con la struttura e lo schema del database.
 
@@ -410,6 +412,64 @@ CREATE DATABASE shop;
 CREATE TABLE shop_product(
     idProd int not null auto_increment primary key,
     prod_name varChar(50),
+    price int,
     quantity int,
+    test varChar(20)
 );
+```
+
+## ALTER
+
+Il comando ALTER mi permette di modificare la struttura di un oggetto. Per esempio se volessi modificare la struttura di una tabella per magari aggiungere una colonna, mi permette di poter rinominare una colonna, eliminarne una o per rinominare una tabella. Per magari altre funzionalità nello specifico, puoi consultare la documentazione di MySql (raccomandata) o quella di IBM.
+
+###### Modifica la tabella shop_product AGGIUNGENDO on_sale con valore boolean
+
+```sql
+ALTER TABLE shop_product ADD on_sale boolean;
+```
+
+ADD è un comando che fa parte di ALTER TABLE e puoi trovare altri comandi nella documentazione e trovare quello che fa al caso tuo sempre lì.
+
+###### Modifica la tabella shop_product MODIFICANDO LA COLONNA prezzo con valore decimale(5,2)
+
+```sql
+ALTER TABLE shop_product ALTER COLUMN price decimal(5,2);
+```
+
+###### Modifica la tabella shop_product ELIMINANDO LA COLONNA test
+
+```sql
+ALTER TABLE shop_product DROP COLUMN test;
+```
+
+## DROP
+
+Con il comando drop puoi eliminare un oggetto nel database.
+
+```sql
+DROP TABLE shop_product;
+```
+
+## TRUNCATE
+
+Con il comando TRUNCATE posso andare ad eliminare tutti i dati in una tabella mantenendo e preservando la struttura di quest'ultima. Questo comando è comodo in fase di testing ma difficilmente utilizzato in produzione.
+
+```sql
+TRUNCATE TABLE shop_product;
+```
+
+## RENAME
+
+Con il comando RENAME posso andare a modificare il nome di un oggetto, in questo caso di una tabella. Il comando rename può essere anche associato ad ALTER
+
+##### RINOMINA tabella shop_product CON products data
+
+```sql
+RENAME TABLE shop_product TO products_data;
+```
+
+##### MODIFICA LA TABELLA tea_products RINOMINANDO LA COLONNA price CON tea_price
+
+```sql
+ALTER TABLE tea_products RENAME COLUMN price TO tea_price
 ```
